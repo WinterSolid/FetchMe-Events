@@ -14,8 +14,8 @@ struct Event: Codable {
     public let url: String // URL of Event
     public let stats: Int
     
-    public let datetime_local: String // Date times
-    public let datetime_utc: String
+    public let dateTime_local: String // Date times
+    public let dateTime_utc: String
     public let date_tbd: Bool
     public let time_tbd: Bool
     
@@ -28,10 +28,10 @@ struct Event: Codable {
     public let id:  Int
     
 
-    func formatDatTime() -> String {
+    func formatDateTime() -> String {
         let dateFormatting = DateFormatter()
             dateFormatting.dateFormat = "yyyy-MM-dd'T'HH:mm:ss" //format per api doc
-        let date = dateFormatting.date(from: datetime_local)
+        let date = dateFormatting.date(from: dateTime_local)
         var dateTimeString: String!
         
     // Date/Time presentation logic
