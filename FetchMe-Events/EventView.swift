@@ -34,7 +34,32 @@ class EventView: UITableViewCell {
         for eventID in favoritedEventIDs {
             if eventID.value(forKeyPath: "eventID") as? Int == event.id {
                 favorited = true
+            }
+        }
+        if #available(iOS 13.0, *) {
+            favoriteHeartImage.image = UIImage(systemName: "heart.fill")
+        } else {
+            favoriteHeartImage.image = UIImage(named: "Heart-Fill")//Early Vers.
+        }
+        if !favorited {
+            favoriteHeartImage.isHidden = true
+        }
+        else {
+            favoriteHeartImage.isHidden = false
+        }
+        func roundImageCorners() {
+            eventImage.layer.cornerRadius = 7.0 //8.0
+            eventImage.clipsToBounds = true
+        }
+        
+        func setupWordWrapping() {
+            eventLabel.numberOfLines = 0
+            locationLabel.numberOfLines = 0
+            dateTimeLabel.numberOfLines = 0
+        }
+        
+        override func layoutSubview() {
+            super.layoutSubviews()
+            roundImageCorners()
+        }
     }
-
-}
-
