@@ -1,7 +1,6 @@
 # FetchMe-Events
-Events search application using Swift SwiftUI 
+*Events searching application using Swift for iOS 
 
-Requirements:\
 • Native iOS Platform with Swift\
 • Allows for Favorited events are\
 • Events are searched through SeatGeek API\
