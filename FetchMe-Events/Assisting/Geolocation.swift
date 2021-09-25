@@ -1,7 +1,7 @@
 //
 //  Geolocation.swift
 //  FetchMe-Events
-//
+//  Slack assisted
 //  Created by Zakee Tanksley on 9/25/21.
 //
 

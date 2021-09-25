@@ -22,7 +22,7 @@ struct Event: Codable {
     public let time_tbd: Bool
     //Performer info
     public let performers: [Performer]
-    public let venue: String
+    public let venue: Venue
     public let short_title: String
     
     public let score: Float
@@ -56,10 +56,13 @@ struct Event: Codable {
         var events: [Event]
     }
     
-    func locationFormat() -> String{
+    func formatLocation() -> String {
+        // Null safety
+        let city = ( venue.city != nil ? venue.city! : "" )
+        let state = ( venue.state != nil ? venue.state! : "" )
         
-        let city = ( venue.city != nil ? venue.city! : ""  )
-        let state = ( venue.city != nil ? venue.city! : ""  )
+        
+        
         
         if (city != "" && state != "" ) {
             return "\(city),\(state)"

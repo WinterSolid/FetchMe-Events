@@ -1,7 +1,7 @@
 //
 //  imageBorders.swift
 //  FetchMe-Events
-//
+//  Assisted - CGPoint
 //  Created by Zakee Tanksley on 9/25/21.
 //
 
@@ -49,12 +49,7 @@ extension UIImage {
         return colored
     }
     
-    /// Adds stroke to given image
-    /// - Parameters:
-    ///   - color: color of the stroke
-    ///   - thickness: thickness of the stroke
-    ///   - quality: rendering quality of the stroke
-    /// - Returns: image with added stroke
+    // Adds stroke to image
     func stroked(with color: UIColor = .white, thickness: CGFloat = 2, quality: CGFloat = 10) -> UIImage {
         
         if (self.isStroked == true) {
