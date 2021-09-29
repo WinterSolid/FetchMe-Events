@@ -8,3 +8,4 @@
 • The application must compile with Xcode 12.x.x\
 
 Images used are rights of their entities.
+project requested by FetchRewards
